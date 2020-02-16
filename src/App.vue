@@ -12,14 +12,15 @@ import {mapActions} from 'vuex'
 export default {
 
   mounted () {
-    /*const result = await reqFoodTypes()
-    console.log(result)*/
-    /*this.$store.dispatch('getAddress')*/
+    /* const result = await reqFoodTypes()
+    console.log(result) */
+    /* this.$store.dispatch('getAddress') */
     this.getAddress()
+    this.getUserInfo()
   },
 
-  methods:{
-    ...mapActions(['getAddress'])
+  methods: {
+    ...mapActions(['getAddress', 'getUserInfo'])
   },
 
   components: {

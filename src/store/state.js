@@ -6,7 +6,10 @@ export default {
   latitude: 40.10038,
   longitude: 116.36867,
   address: {},
-  categorys:[],
-  shops:[],
-
+  categorys: [],
+  shops: [],
+  userInfo: {}, // 用户信息
+  info: {},
+  goods: [],
+  ratings: []
 }

@@ -10,6 +10,10 @@ import Search from '../pages/Search/Search'
 import Order from '../pages/Order/Order'
 import Profile from '../pages/Profile/Profile'
 import Login from '../pages/Login/Login'
+import Shop from '../pages/Shop/Shop'
+import ShopGoods from '../pages/Shop/ShopGoods/ShopGoods'
+import ShopRatings from '../pages/Shop/ShopRatings/ShopRatings'
+import ShopInfo from '../pages/Shop/ShopInfo/ShopInfo'
 
 // 声明使用插件
 Vue.use(VueRouter)
@@ -52,6 +56,29 @@ export default new VueRouter({
     {
       path: '/',
       redirect: '/msite'
+    },
+    {
+      path: '/Shop',
+      component: Shop,
+      children: [
+        {
+          path: '/shop/goods',
+          component: ShopGoods
+        },
+        {
+          path: '/shop/ratings',
+          component: ShopRatings
+        },
+        {
+          path: '/shop/info',
+          component: ShopInfo
+        },
+        {
+          // 默认地址
+          path: '',
+          redirect: '/shop/goods'
+        }
+      ]
     }
   ]
 })
